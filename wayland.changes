@@ -1,0 +1,26 @@
+* Tue Jul 5 2011 Carsten Munk <carsten@maemo.org> - 0.1
+- Made git versions incremental based on commit amounts
+
+* Mon Jul 4 2011 Carsten Munk <carsten@maemo.org> - 0.1
+- Updated to aa7bbb210b
+
+* Sat May 7 2011 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Reverted to wayland-0.1~git21e877f3f6.tar.bz2
+
+* Wed May 4 2011 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Updated to 92d61f13b9. "mmap shm buffers read/write"
+
+* Wed Apr 27 2011 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Cleaned up .yaml file.
+
+* Wed Apr 27 2011 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Updated from git21e877f3f6 to gitc964a5201e
+
+* Fri Apr 1 2011 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Set XDG_RUNTIME_DIR to /tmp.
+
+* Wed Nov 10 2010 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Rename to wayland-0.1~git21e877f3f6.tar.bz2
+
+* Wed Nov 10 2010 Liu Xinyun <xinyun.liu@intel.com> - 0.1
+- Initial version.

@@ -1,0 +1,29 @@
+Name: wayland
+Summary: wayland compositor
+Version: 0.1~git716.gaa7bbb2
+Release: 1
+Group: System/Libraries
+License: MIT
+URL: http://www.x.org/
+Sources:
+    - wayland-%{version}.tar.bz2
+Description: wayland is another window System
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+PkgBR:
+    - expat-devel
+PkgConfigBR:
+    - libffi
+Configure: reconfigure
+Builder: make
+SubPackages:
+    - Name: devel
+      Summary: wayland devel library
+      Group: Development/Libraries
+      Description: devel files for wayland
+      Provides: 
+        - wayland-server
+        - wayland-client
