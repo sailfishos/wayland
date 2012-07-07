@@ -11,7 +11,7 @@ Version:    0.1~git716.gaa7bbb2
 Release:    1
 Group:      System/Libraries
 License:    MIT
-URL:        http://www.x.org/
+URL:        http://wayland.freedesktop.org/
 Source0:    wayland-%{version}.tar.bz2
 Source100:  wayland.yaml
 Requires(post): /sbin/ldconfig

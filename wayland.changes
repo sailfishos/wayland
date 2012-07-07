@@ -1,3 +1,6 @@
+* Sun Jul 08 2012 Javier Jardón <jjardon@gnome.org> 0.1
+- Fixes MER#274 : wayland yaml file has obsolete URL entry
+
 * Tue Jul 5 2011 Carsten Munk <carsten@maemo.org> - 0.1
 - Made git versions incremental based on commit amounts
 
