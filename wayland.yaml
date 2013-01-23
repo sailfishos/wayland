@@ -1,12 +1,12 @@
 Name: wayland
 Summary: wayland compositor
-Version: 0.95.0
+Version: 1.0.2
 Release: 1
 Group: System/Libraries
 License: MIT
 URL: http://wayland.freedesktop.org/
 Sources:
-    - wayland-%{version}.tar.bz2
+    - wayland-%{version}.tar.xz
 Description: wayland is another window System
 
 RequiresPost:
@@ -18,6 +18,8 @@ PkgBR:
 PkgConfigBR:
     - libffi
 Configure: reconfigure
+ConfigOptions:
+     - --disable-documentation
 Builder: make
 SubPackages:
     - Name: devel
