@@ -9,7 +9,7 @@ Name:       wayland
 # << macros
 
 Summary:    wayland compositor
-Version:    1.0.2
+Version:    1.1.0
 Release:    1
 Group:      System/Libraries
 License:    MIT
