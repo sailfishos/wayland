@@ -7,6 +7,8 @@ License: MIT
 URL: http://wayland.freedesktop.org/
 Sources:
     - wayland-%{version}.tar.xz
+Patches:
+    - 0001-client-Add-acquire-fd-API-to-avoid-requiring-a-polli.patch
 Description: wayland is another window System
 
 RequiresPost:

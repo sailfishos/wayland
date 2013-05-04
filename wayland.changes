@@ -1,3 +1,6 @@
+* Sat May 04 2013 Carsten Munk <carsten.munk@jollamobile.com> - 1.1.0
+- Add krh's patch for threading issues
+
 * Wed Apr 17 2013 Chris Leach <cxl000@hotmail.com> - 1.1.0
 - Update to version 1.1.0
 

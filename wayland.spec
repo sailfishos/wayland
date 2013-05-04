@@ -16,6 +16,7 @@ License:    MIT
 URL:        http://wayland.freedesktop.org/
 Source0:    wayland-%{version}.tar.xz
 Source100:  wayland.yaml
+Patch0:     0001-client-Add-acquire-fd-API-to-avoid-requiring-a-polli.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(libffi)
@@ -38,6 +39,8 @@ devel files for wayland
 %prep
 %setup -q -n %{name}-%{version}
 
+# 0001-client-Add-acquire-fd-API-to-avoid-requiring-a-polli.patch
+%patch0 -p1
 # >> setup
 # << setup
 
