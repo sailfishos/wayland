@@ -37,7 +37,7 @@ Provides:   wayland-client
 devel files for wayland
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}/wayland
 
 # 0001-client-Add-acquire-fd-API-to-avoid-requiring-a-polli.patch
 %patch0 -p1
