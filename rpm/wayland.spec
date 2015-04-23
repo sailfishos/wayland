@@ -84,12 +84,13 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/wayland-client.pc
 %{_libdir}/pkgconfig/wayland-cursor.pc
 %{_libdir}/pkgconfig/wayland-server.pc
-%{_datadir}/pkgconfig/wayland-scanner.pc
+%{_libdir}/pkgconfig/wayland-scanner.pc
 %{_libdir}/libwayland-client.so
 %{_libdir}/libwayland-cursor.so
 %{_libdir}/libwayland-server.so
 %{_datadir}/aclocal/wayland-scanner.m4
 %{_datadir}/wayland/wayland-scanner.mk
 %{_datadir}/wayland/wayland.xml
+%{_datadir}/wayland/wayland.dtd
 
 # << files devel
