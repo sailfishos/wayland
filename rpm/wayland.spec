@@ -38,7 +38,7 @@ wayland-egl library
 Summary:    wayland-egl devel library
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
-Provides:   wayland-egl
+Requires:   %{name}-egl = %{version}-%{release}
 
 %description egl-devel
 wayland-egl devel files
