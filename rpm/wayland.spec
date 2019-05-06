@@ -1,7 +1,7 @@
 Name:       wayland
 
 Summary:    wayland compositor
-Version:    1.15.0
+Version:    1.17.0
 Release:    1
 Group:      System/Libraries
 License:    MIT
