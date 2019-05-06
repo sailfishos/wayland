@@ -30,6 +30,7 @@ devel files for wayland
 Summary:    wayland-egl library
 Group:      System/Libraries
 Requires:   %{name} = %{version}-%{release}
+Obsoletes:  mesa-llvmpipe-libwayland-egl
 
 %description egl
 wayland-egl library
@@ -39,6 +40,7 @@ Summary:    wayland-egl devel library
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 Requires:   %{name}-egl = %{version}-%{release}
+Obsoletes:  mesa-llvmpipe-libwayland-egl-devel
 
 %description egl-devel
 wayland-egl devel files
