@@ -1,14 +1,14 @@
 Name:       wayland
 
 Summary:    wayland compositor
-Version:    1.17.0
+Version:    1.18.0
 Release:    1
-Group:      System/Libraries
 License:    MIT
 URL:        http://wayland.freedesktop.org/
 Source0:    wayland-%{version}.tar.xz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
+BuildRequires:  meson
 BuildRequires:  pkgconfig(libffi)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  expat-devel
@@ -18,7 +18,6 @@ wayland is another window System
 
 %package devel
 Summary:    wayland devel library
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 Provides:   wayland-server
 Provides:   wayland-client
@@ -28,7 +27,6 @@ devel files for wayland
 
 %package egl
 Summary:    wayland-egl library
-Group:      System/Libraries
 Requires:   %{name} = %{version}-%{release}
 Obsoletes:  mesa-llvmpipe-libwayland-egl
 
@@ -37,7 +35,6 @@ wayland-egl library
 
 %package egl-devel
 Summary:    wayland-egl devel library
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 Requires:   %{name}-egl = %{version}-%{release}
 Obsoletes:  mesa-llvmpipe-libwayland-egl-devel
@@ -46,17 +43,15 @@ Obsoletes:  mesa-llvmpipe-libwayland-egl-devel
 wayland-egl devel files
 
 %prep
-%setup -q -n %{name}-%{version}/wayland
+%autosetup -n %{name}-%{version}/wayland
 
 %build
-%reconfigure --disable-static \
-    --disable-documentation
+%meson -Ddocumentation=false
 
-make %{?_smp_mflags}
+%meson_build
 
 %install
-rm -rf %{buildroot}
-%make_install
+%meson_install
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -66,6 +61,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%license COPYING
 %{_bindir}/wayland-scanner
 #%{_sysconfdir}/udev/*.rules
 %{_libdir}/libwayland-client.so.0*
@@ -99,6 +95,7 @@ rm -rf %{buildroot}
 
 %files egl
 %defattr(-,root,root,-)
+%license COPYING
 %{_libdir}/libwayland-egl.so.1*
 
 %files egl-devel
