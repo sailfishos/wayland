@@ -1,7 +1,7 @@
 Name:       wayland
 
 Summary:    wayland compositor
-Version:    1.18.0
+Version:    1.19.0
 Release:    1
 License:    MIT
 URL:        http://wayland.freedesktop.org/
