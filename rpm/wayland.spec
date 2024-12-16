@@ -1,7 +1,7 @@
 Name:       wayland
 
 Summary:    wayland compositor
-Version:    1.22.0
+Version:    1.23.1
 Release:    1
 License:    MIT
 URL:        http://wayland.freedesktop.org/
@@ -60,7 +60,6 @@ wayland-egl devel files
 %postun egl -p /sbin/ldconfig
 
 %files
-%defattr(-,root,root,-)
 %license COPYING
 %{_bindir}/wayland-scanner
 #%{_sysconfdir}/udev/*.rules
@@ -69,7 +68,6 @@ wayland-egl devel files
 %{_libdir}/libwayland-server.so.0*
 
 %files devel
-%defattr(-,root,root,-)
 %{_includedir}/wayland-client.h
 %{_includedir}/wayland-client-core.h
 %{_includedir}/wayland-client-protocol.h
@@ -94,12 +92,10 @@ wayland-egl devel files
 %{_datadir}/wayland/wayland.dtd
 
 %files egl
-%defattr(-,root,root,-)
 %license COPYING
 %{_libdir}/libwayland-egl.so.1*
 
 %files egl-devel
-%defattr(-,root,root,-)
 %{_includedir}/wayland-egl-backend.h
 %{_libdir}/pkgconfig/wayland-egl.pc
 %{_libdir}/pkgconfig/wayland-egl-backend.pc
